@@ -1,0 +1,127 @@
+@import "constants";
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  box-sizing: border-box;
+  font-family: $primary-font;
+  color: $main-p-color;
+  font-size: 15px;
+  color: white;
+}
+
+body {
+  background-color: $primary;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+.container {
+  background-color: $seconday;
+  margin: inherit auto;
+  border-radius: 10px;
+  max-width: min-content;
+  max-height: max-content;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.hero_img {
+  object-fit: contain;
+  max-height: 30vh;
+  backdrop-filter: invert(46%) sepia(60%) saturate(1200%) hue-rotate(236deg)
+    brightness(100%) contrast(91%) opacity(0.7);
+  mix-blend-mode: multiply;
+}
+
+.text_container {
+  background: $seconday;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 20px 40px;
+  .title {
+    color: white;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+
+    .highlighted {
+      font-size: inherit;
+      color: $accent;
+    }
+  }
+  .description {
+    color: $main-p-color;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    margin: 10px 0px;
+  }
+
+  .stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .highlighted {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-weight: 700;
+      color: white;
+    }
+    p {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: $main-p-color;
+      font-size: 15px;
+      margin: 10px auto;
+    }
+  }
+}
+.attribution {
+  background-color: $seconday;
+  padding: 20px;
+  margin: 20px 0px 0px 0px;
+  border-radius: 10px;
+  font-size: 15px;
+  text-align: center;
+  a {
+    color: inherit;
+    font-size: 15px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    flex-direction: row-reverse;
+    max-width: max-content;
+  }
+  .hero_img {
+    object-fit: cover;
+    max-height: 50vh;
+    max-width: 40vw;
+  }
+  .text_container {
+    height: 50vh;
+    width: 45vw;
+    padding: 50px 20px;
+    text-align: left;
+    align-items: flex-start;
+    .title {
+      flex: 2;
+    }
+    .description {
+      flex: 2;
+    }
+    .stats {
+      flex: 3;
+      flex-direction: row;
+
+      p {
+        margin: auto 30px auto auto;
+      }
+    }
+  }
+}

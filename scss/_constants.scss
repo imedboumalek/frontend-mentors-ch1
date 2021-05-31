@@ -1,0 +1,15 @@
+$mobile-width: 375px;
+$desktop-width: 1440px;
+
+// primary colors
+$primary: #090b1a;
+$seconday: #1b1938;
+$accent: #aa5cdb;
+// neutral colors
+$main-p-color: hsla(0, 0%, 100%, 0.6);
+$stat-heading-color: hsla(0, 0%, 100%, 0.75);
+
+// fonts
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+$primary-font: "Inter", sans-serif;
+$seconday-font: "Lexend Deca", sans-serif;
